@@ -16,6 +16,7 @@ int symbol2Value(char symbol)
     return 500;
   if (symbol == 'M')
     return 1000;
+  return 0;
 }
 
 int romantoint(std::string roman_numeral)
@@ -23,7 +24,7 @@ int romantoint(std::string roman_numeral)
   char actualSymbol;
   char nextSymbol;
   int finalValue=0;
-  for (int i=0; i< roman_numeral.size(); i++)
+  for (std::string::size_type i = 0; i< roman_numeral.size(); i++)
     {
       actualSymbol = roman_numeral[i];
       if(i+1 < roman_numeral.size())
